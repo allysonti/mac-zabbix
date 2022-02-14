@@ -10,10 +10,10 @@ services:
     volumes:
       - BD_mysql:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=arduino2019
+      - MYSQL_ROOT_PASSWORD=suasenha
       - MYSQL_DATABASE=zabbix
       - MYSQL_USER=zabbix
-      - MYSQL_PASSWORD=arduino2019
+      - MYSQL_PASSWORD=suasenha
   
   zabbix-server:
     container_name: zabbix-server
@@ -29,7 +29,7 @@ services:
       - DB_SERVER_HOST=mysql
       - MYSQL_DATABASE=zabbix
       - MYSQL_USER=zabbix
-      - MYSQL_PASSWORD=arduino2019
+      - MYSQL_PASSWORD=suasenha
       - ZBX_CACHESIZE=50M
       - ZBX_VALUECACHESIZE=25M
       - ZBX_IPMIPOLLERS=2 
